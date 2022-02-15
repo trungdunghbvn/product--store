@@ -1,0 +1,86 @@
+.product {
+    background-color: #ffffff;
+    margin-bottom: 4px;
+    padding: 12px;
+    display: flex;
+    cursor: pointer;
+    &:last-child {
+        margin-bottom: 16px;
+    }
+
+    &__thumbnail {
+        width: 80px;
+        height: 80px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    &__info {
+        flex: 1;
+        padding-left: 12px;
+        .product-name {
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 19px;
+            letter-spacing: -0.15px;
+            color: #262829;
+        }
+        .product-price {
+            margin-top: 4px;
+            &__price {
+                font-size: 15px;
+                line-height: 20px;
+                letter-spacing: -0.4px;
+                color: rgb(234, 52, 31);
+                position: relative;
+                font-weight: 600;
+                width: fit-content;
+                &::before {
+                    position: absolute;
+                    content: "đ";
+                    font-size: 12px;
+                    right: -10px;
+                    top: -2px;
+                }
+            }
+            .has-discount {
+                display: flex;
+            }
+            &__original {
+                font-size: 12px;
+                line-height: 16px;
+                letter-spacing: -0.1px;
+                color: rgb(143, 149, 152);
+                text-decoration: line-through;
+            }
+            &__discount {
+                background-image: linear-gradient(to right, rgb(223, 32, 32) 0%, rgb(245, 71, 30) 100%);
+                min-width: 25px;
+                display: flex;
+                justify-content: center;
+                padding-right: 5px;
+                margin-left: 10px;
+                position: relative;
+                height: 15px;
+                font-size: 10px;
+                color: rgb(255, 255, 255);
+                border-top-right-radius: 2px;
+                border-bottom-right-radius: 2px;
+                letter-spacing: -0.24px;
+                &::after {
+                    position: absolute;
+                    content: "";
+                    height: 15px;
+                    width: 10px;
+                    left: -10px;
+                    border-top: 7px solid transparent;
+                    border-bottom: 7px solid transparent;
+                    border-right: 4px solid rgb(223, 32, 32);
+                }
+            }
+        }
+    }
+}

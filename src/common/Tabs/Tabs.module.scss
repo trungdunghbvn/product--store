@@ -1,0 +1,54 @@
+.Tabs {
+    &__Wrapper {
+        border-bottom: 1px solid rgb(238, 241, 243);
+        padding: 0 12px;
+        .Tabs__List {
+            display: flex;
+            flex-wrap: nowrap;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            .Tabs__Item {
+                display: flex;
+                flex: 1 1 100%;
+                margin: 0;
+                padding: 0;
+                cursor: pointer;
+                .Tabs__Tab {
+                    width: 100%;
+                    font-size: 13px;
+                    line-height: 18px;
+                    color: rgb(143, 149, 152);
+                    padding: 12px 0px;
+                    text-align: center;
+                    &--selected {
+                        span {
+                            font-weight: 500;
+                            color: rgb(38, 40, 41);
+                            position: relative;
+                            &::before {
+                                content: "";
+                                background: rgb(223, 32, 32);
+                                position: absolute;
+                                bottom: -14px;
+                                left: 0;
+                                right: 0;
+                                height: 2px;
+                            }
+                        }
+                    }
+                }
+                &:last-child {
+                    .Tabs__Tab {
+                        text-align: right;
+                    }
+                }
+                &:first-child {
+                    .Tabs__Tab {
+                        text-align: left;
+                    }
+                }
+            }
+        }
+    }
+}
